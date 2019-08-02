@@ -1,0 +1,33 @@
+{
+  "name": "comfydiscord",
+  "version": "1.0.0",
+  "description": "Comfiest Discord Bot Module for Coding Cafe",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/instafluff/ComfyDiscord.git"
+  },
+  "keywords": [
+    "comfy",
+    "instafluff",
+    "discord",
+    "bot",
+    "easy",
+    "coding",
+    "javascript"
+  ],
+  "author": "Instafluff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/instafluff/ComfyDiscord/issues"
+  },
+  "homepage": "https://github.com/instafluff/ComfyDiscord#readme"
+}
