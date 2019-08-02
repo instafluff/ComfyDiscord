@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-var ComfyDiscord = require("./app");
+var ComfyDiscord = require("./index");
 ComfyDiscord.onCommand = ( channel, user, command, message, flags, extra ) => {
   console.log( command, user, message, flags );
   if( channel === "discordbotjam" ) {
