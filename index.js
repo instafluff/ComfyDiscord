@@ -13,14 +13,22 @@ var comfyDiscord = {
       console.log( "onChat default handler" );
     }
   },
-  Say: function( channel, message ) {
+  Say: function( channel, message, opts ) {
     if( client ) {
       const discordChannel = client.channels.find(ch => ch.name === channel );
       // console.log( discordChannel );
       // Do nothing if the channel wasn't found on this server
       if( !discordChannel ) return;
-      discordChannel.send( message )
-      .catch( function( error ) { console.log( "Error:", error ); } );
+      if( opts.attachment ) {
+        var filename = opts.filename || opts.attachment.substring(opts.attachment.lastIndexOf('/')+1);
+        const attachment = new Discord.Attachment( opts.attachment, filename );
+        discordChannel.send( message, attachment )
+        .catch( function( error ) { console.log( "Error:", error ); } );
+      }
+      else {
+        discordChannel.send( message )
+        .catch( function( error ) { console.log( "Error:", error ); } );
+      }
       return true;
     }
     return false;
