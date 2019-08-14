@@ -19,7 +19,7 @@ var comfyDiscord = {
       // console.log( discordChannel );
       // Do nothing if the channel wasn't found on this server
       if( !discordChannel ) return;
-      if( opts.attachment ) {
+      if( opts && opts.attachment ) {
         var filename = opts.filename || opts.attachment.substring(opts.attachment.lastIndexOf('/')+1);
         const attachment = new Discord.Attachment( opts.attachment, filename );
         discordChannel.send( message, attachment )

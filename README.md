@@ -80,4 +80,4 @@ ComfyDiscord.Init( process.env.DISCORDTOKEN );
 ## Credits ##
 Thank you too all the participants of this project!
 
-****
+**Gilokk0, ItsLittany, Instafluff, Instafriend, ChatTranslator, BillNash, MacabreMan, MsSaltyGiggles, That_MS_Gamer, DutchGamer46, sethorizer, TastyZero, jackconceprio, Amarogine, xRolo768, simrose4u, FlavCreations, i_am_from_mars, PhysoTronic, IAmThatOneJason, twallace123, superman1990skid, LilyHazel, Stay_Hydrated_Bot, atel0s, Docpinecone, Copperbeardy, losthewar, wietlol, caLLowCreation, JMSWRNR, BungalowGlow, theArtifacts, SausageCam, crazychick2019, morepizza308, TheHungerService, rockysenpai24, BellaTriXrbsa, where_is_laughingman, LatJorr, seniorkae, ReadyPlayerEmma, smilesandtea, merkurrz, CJnxd, primal_vertex, QuiiZyy, lewdmelon, MalForTheWin, itsboek, twitch_chat_is_stupid, iMrTnT, angel0O, ripSquidd, napkats, boki996, Clarkio, drowmander, JUBAN_3, Kyoslilmonster, ElysiaGriffin, tvgBadger, DareFutari, HonestDanGames, Dragonflytru_1, imJMB, rurutu, kazuhiko0, ichibadass, DurandalCraft, codeheir, shinageeexpress, JesusAcHe**
