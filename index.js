@@ -46,6 +46,7 @@ var comfyDiscord = {
         let channel = data.channel.name;
         let channelId = data.channel.id;
         let isBot = data.author.bot;
+        let userId = data.author.id;
         let user = data.author.username;
         let userNum = data.author.discriminator;
         let nickname = data.member.nickname;
@@ -59,6 +60,7 @@ var comfyDiscord = {
           id: messageId,
           channelId: channelId,
           channel: channel,
+          userId: userId,
           username: user,
           userNumber: userNum,
           nickname: nickname,
