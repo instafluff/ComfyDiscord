@@ -21,7 +21,7 @@ npm install comfydiscord --save
 2. Respond to !commands in your Discord
 ```javascript
 var ComfyDiscord = require("comfydiscord");
-ComfyDiscord.onCommand = ( user, command, message, flags ) => {
+ComfyDiscord.onCommand = ( channel, user, command, message, flags ) => {
   if( command == "test" ) {
     console.log( "!test was typed in chat" );
   }
