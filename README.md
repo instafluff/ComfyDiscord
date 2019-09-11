@@ -20,7 +20,9 @@ npm install comfydiscord --save
 
 2. Respond to !commands in your Discord
 ```javascript
-var ComfyDiscord = require("comfydiscord");
+require( "dotenv" ).config();
+
+var ComfyDiscord = require( "comfydiscord" );
 ComfyDiscord.onCommand = ( channel, user, command, message, flags ) => {
   if( command == "test" ) {
     console.log( "!test was typed in chat" );
@@ -51,6 +53,7 @@ Sending Chat Messages can be done through `ComfyDiscord.Say( channel, message )`
 
 #### Securely adding your Discord token
 1. Register a Discord App, Navigate to `Bot` in the Settings Menu on the page, and Get a Discord Bot Token - [https://discordapp.com/developers/applications/](https://discordapp.com/developers/applications/)
+and Invite the Bot into your server using a link with your Bot's Client ID and permission scope [https://discordapp.com/oauth2/authorize?client_id=123mybotclientid123&scope=bot&permissions=133262656](https://discordapp.com/oauth2/authorize?client_id=123mybotclientid123&scope=bot&permissions=133262656)
 2. Install `dotenv`
 ```
 npm install dotenv --save
@@ -61,7 +64,9 @@ DISCORDTOKEN=[DISCORD-BOT-TOKEN HERE] # e.g. DISCORDTOKEN=Fdkjher128764Da3B
 ```
 4. Initialize with the Token
 ```javascript
-var ComfyDiscord = require("comfydiscord");
+require( "dotenv" ).config();
+
+var ComfyDiscord = require( "comfydiscord" );
 ComfyDiscord.onCommand = ( user, command, message, flags ) => {
   if( command == "test" ) {
     ComfyDiscord.Say( "general", "replying to !test" );
