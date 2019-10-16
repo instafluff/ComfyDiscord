@@ -43,7 +43,8 @@ var comfyDiscord = {
     client.on( 'message', function( data ) {
       try {
         // console.log( data );
-        let channel = data.channel.name;
+        let channel = data.channel;
+        let channelName = data.channel.name;
         let channelId = data.channel.id;
         let isBot = data.author.bot;
         let userId = data.author.id;
@@ -53,6 +54,7 @@ var comfyDiscord = {
         let name = nickname || ( user + "#" + userNum );
         var message = data.content;
         var messageId = data.id;
+        var cleanContent = data.cleanContent;
         var flags = {
           bot: isBot
         };
@@ -64,17 +66,18 @@ var comfyDiscord = {
           username: user,
           userNumber: userNum,
           nickname: nickname,
-          displayName: name
+          displayName: name,
+          cleanContent: cleanContent
         };
         if( !isBot && message[ 0 ] === "!" ) {
           // Message is a command
           var parts = message.split( / (.*)/ );
           var command = parts[ 0 ].slice( 1 ).toLowerCase();
           var msg = parts[ 1 ] || "";
-          comfyDiscord.onCommand( channel, user, command, msg, flags, extra );
+          comfyDiscord.onCommand( channelName, user, command, msg, flags, extra );
         }
-        else {
-          comfyDiscord.onChat( channel, user, message, flags, extra );
+        else if ( userId != client.user.id ) {
+          comfyDiscord.onChat( channelName, user, message, flags, extra );
         }
       }
       catch( error ) {
