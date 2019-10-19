@@ -67,7 +67,7 @@ DISCORDTOKEN=[DISCORD-BOT-TOKEN HERE] # e.g. DISCORDTOKEN=Fdkjher128764Da3B
 require( "dotenv" ).config();
 
 var ComfyDiscord = require( "comfydiscord" );
-ComfyDiscord.onCommand = ( user, command, message, flags ) => {
+ComfyDiscord.onCommand = ( channel, user, command, message, flags ) => {
   if( command == "test" ) {
     ComfyDiscord.Say( "general", "replying to !test" );
   }
