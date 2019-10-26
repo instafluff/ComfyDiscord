@@ -22,7 +22,7 @@ npm install comfydiscord --save
 ```javascript
 require( "dotenv" ).config();
 
-var ComfyDiscord = require( "comfydiscord" );
+const ComfyDiscord = require( "comfydiscord" );
 ComfyDiscord.onCommand = ( channel, user, command, message, flags ) => {
   if( command == "test" ) {
     console.log( "!test was typed in chat" );
@@ -66,7 +66,7 @@ DISCORDTOKEN=[DISCORD-BOT-TOKEN HERE] # e.g. DISCORDTOKEN=Fdkjher128764Da3B
 ```javascript
 require( "dotenv" ).config();
 
-var ComfyDiscord = require( "comfydiscord" );
+const ComfyDiscord = require( "comfydiscord" );
 ComfyDiscord.onCommand = ( channel, user, command, message, flags ) => {
   if( command == "test" ) {
     ComfyDiscord.Say( "general", "replying to !test" );
