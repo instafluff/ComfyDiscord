@@ -10,7 +10,7 @@ let client = null;
 /**
  * @typedef MessageExtras Extra details from the message.
  * @prop {string} id The message ID.
- * @prop {string} channelId 
+ * @prop {string} channelId The channel ID.
  * @prop {import("discord.js").TextChannel | import("discord.js").DMChannel | import("discord.js").GroupDMChannel} channel Channel.
  * @prop {string} userId Message author's ID.
  * @prop {string} username Message author's username.

@@ -77,10 +77,51 @@ ComfyDiscord.Init( process.env.DISCORDTOKEN );
 
 ## All Supported Events ##
 
- - **onCommand**`( channel, user, command, message, flags, extra )`
-    - Responds to "!" commands
- - **onChat**`( channel, user, message, flags, extra )`
-    - Responds to user chatting
+- **onCommand**`( channel, user, command, message, flags, extra )`
+
+  Responds to "!" commands
+
+  - **`channel`** (_string_) - Name of the Discord channel.
+  - **`user`** (_string_) - Name of the message author.
+  - **`command`** (_string_) - Name of the command used. The "!" is removed
+  and is lower case.
+  - **`message`** (_string_) - The message without the command.
+  - **`flags`** (_MessageFlags_) - Basic flags about the user.
+  - **`extra`** (_MessageExtras_) - Extra details from the message.
+
+- **onChat**`( channel, user, message, flags, extra )`
+
+  Responds to user chatting
+
+  - **`channel`** (_string_) - Name of the Discord channel.
+  - **`user`** (_string_) - Name of the message author.
+  - **`message`** (_string_) - The message.
+  - **`flags`** (_MessageFlags_) - Basic flags about the user.
+  - **`extra`** (_MessageExtras_) - Extra details from the message.
+
+### Types ###
+
+- **`MessageFlags`** (_object_)
+
+  Basic flags about the user.
+
+  - **`bot`** (_boolean_) If the user is a bot account.
+
+- **`MessageExtras`** (_object_)
+
+  Extra details from the message.
+
+  - **`id`** (_string_) - The message ID.
+  - **`channelId`** (_string_) - The channel ID.
+  - **`channel`** (_TextChannel | DMChannel | GroupDMChannel_) - Discord.js
+  Channel.
+  - **`userId`** (_string_) - Message author's ID.
+  - **`username`** (_string_) - Message author's username.
+  - **`userNumber`** (_string_) - Message author's username discriminator.
+  - **`nickname`** (_string_) - Message author's nickname within the guild.
+  - **`displayName`** (_string_) - Nickname or username with discriminator.
+  - **`cleanContent`** (_string_) - The message contents with all mentions
+  replaced by the equivalent text.
 
 ## Credits ##
 Thank you too all the participants of this project!
