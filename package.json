@@ -1,6 +1,6 @@
 {
   "name": "comfydiscord",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Comfiest Discord Bot Module for Coding Cafe",
   "main": "index.js",
   "dependencies": {
