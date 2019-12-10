@@ -82,8 +82,8 @@ const comfyDiscord = {
     if( opts && opts.attachment ) {
       const { attachment } = opts;
       const filename = opts.filename || attachment.substring( attachment.lastIndexOf( "/" ) + 1 );
-      const attachment = new Discord.Attachment( attachment, filename );
-      prom = discordChannel.send( message, attachment );
+      const discordAttachment = new Discord.Attachment( attachment, filename );
+      prom = discordChannel.send( message, discordAttachment );
     }
     else {
       prom = discordChannel.send( message );
