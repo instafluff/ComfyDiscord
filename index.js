@@ -71,7 +71,7 @@ const comfyDiscord = {
     if( !client ) {
       return false;
     }
-    const discordChannel = client.channels.find( ch => ch.name === channel );
+    const discordChannel = client.channels.cache.find( ch => ch.name === channel );
     // console.log( discordChannel );
     // Do nothing if the channel wasn't found on this server
     if( !discordChannel ) {
@@ -82,7 +82,7 @@ const comfyDiscord = {
     if( opts && opts.attachment ) {
       const { attachment } = opts;
       const filename = opts.filename || attachment.substring( attachment.lastIndexOf( "/" ) + 1 );
-      const discordAttachment = new Discord.Attachment( attachment, filename );
+      const discordAttachment = new Discord.MessageAttachment( attachment, filename );
       prom = discordChannel.send( message, discordAttachment );
     }
     else {
