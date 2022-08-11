@@ -108,7 +108,7 @@ const comfyDiscord = {
       comfyDiscord.isDebug = isDebug;
     }
 
-    client = new Discord.Client( { intents: [ Discord.GatewayIntentBits.Guilds ] } );
+    client = new Discord.Client();// { intents: [ Discord.GatewayIntentBits.Guilds ] } );
     client.on( "message", ( data ) => {
       try {
         // console.log( data );
